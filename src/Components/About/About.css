@@ -1,0 +1,118 @@
+.about-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image-glow {
+  position: absolute;
+  inset: -1rem;
+  background: linear-gradient(to right, #f43f5e, #f97316);
+  border-radius: 1.5rem;
+  opacity: 0.2;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.about-image {
+  position: relative;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  z-index: 1;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffe4e6;
+  color: #e11d48;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1c1917;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.about-highlight {
+  display: block;
+  background: linear-gradient(to right, #e11d48, #f97316);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  color: #57534e;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.about-stats {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.about-stat-box {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.about-stat-box.pink {
+  background: linear-gradient(to bottom right, #fff1f2, #fff7ed);
+}
+
+.about-stat-box.orange {
+  background: linear-gradient(to bottom right, #fff7ed, #fff1f2);
+}
+
+.about-stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ea580c;
+  margin-bottom: 0.5rem;
+}
+
+.about-stat-box.pink .about-stat-number {
+  color: #e11d48;
+}
+
+.about-stat-label {
+  color: #292524;
+  font-weight: 500;
+}

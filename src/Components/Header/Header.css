@@ -1,0 +1,161 @@
+/* Header.css */
+
+.header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom right, #e11d48, #f97316);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-letter {
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #e11d48, #f97316);
+  background-clip: text;
+  -webkit-background-clip: text;      /* for Safari & Chrome */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* for Safari */
+}
+
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: #6b7280;
+  display: block;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.nav-link:hover {
+  color: #e11d48;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-button {
+  background: linear-gradient(to right, #e11d48, #f97316);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-button:hover {
+  background: linear-gradient(to right, #be123c, #ea580c);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-mobile {
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.nav-mobile-link {
+  padding: 0.5rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.nav-mobile-link:hover {
+  color: #e11d48;
+  background-color: #f9fafb;
+}
+
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .brand-subtitle {
+    display: block;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}

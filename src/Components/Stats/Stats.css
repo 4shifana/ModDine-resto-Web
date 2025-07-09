@@ -1,0 +1,46 @@
+.stats-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-item {
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.1);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #666666;
+}
+
+.rose {
+  color: #e11d48; /* Rose-600 */
+}
+
+.orange {
+  color: #ea580c; /* Orange-600 */
+}
