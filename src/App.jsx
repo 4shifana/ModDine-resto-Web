@@ -1,18 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'; 
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Layout from './Layout';
-import Hero from './Components/Hero/Hero';
-import Stats from './Components/Stats/Stats';
-import MenuPage from './Pages/MenuPage';
-import About from './Components/About/About';
-import Contact from './Components/ContactUs/Contact';
+import Layout from "./Layout";
+import Hero from "./Components/Hero/Hero";
+import Stats from "./Components/Stats/Stats";
+import MenuPage from "./Pages/MenuPage";
+import About from "./Components/About/About";
+import Contact from "./Components/ContactUs/Contact";
 
-import { CartProvider, useCart } from './context/CartContext';
-import { FavoritesProvider } from './context/FavoritesContext';
-import { FilterProvider } from './context/FilterContext';
+import { CartProvider, useCart } from "./context/CartContext.jsx";
+import { FavoritesProvider } from "./context/FavoritesContext.jsx";
+import { FilterProvider } from "./context/FilterContext.jsx";
 
+// 👉 This is your homepage content
 function HomePage() {
   return (
     <>
@@ -25,6 +26,7 @@ function HomePage() {
   );
 }
 
+// 👉 Wraps layout so we can pass cart/favorites props
 function LayoutWrapper() {
   const {
     cart,
@@ -58,13 +60,14 @@ function App() {
     <CartProvider>
       <FavoritesProvider>
         <FilterProvider>
-          <Router>
+          <BrowserRouter>
             <Routes>
               <Route path="/" element={<LayoutWrapper />}>
+                {/* 👇 This is your one‑page content */}
                 <Route index element={<HomePage />} />
               </Route>
             </Routes>
-          </Router>
+          </BrowserRouter>
         </FilterProvider>
       </FavoritesProvider>
     </CartProvider>
